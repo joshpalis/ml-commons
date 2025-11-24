@@ -212,13 +212,7 @@ public class QueryPlanningPromptTemplate {
         "Use this search template provided by the user as reference to generate the query: ${parameters.template}\n\n"
             + "Note that this template might contain terms that are not relevant to the question at hand, in that case ignore the template";
 
-    public static final String DEFAULT_QUERY_PLANNING_SYSTEM_PROMPT = PROMPT_PREFIX
-        + "\n\n"
-        + OUTPUT_FORMAT_INSTRUCTIONS
-        + "\n"
-        + EXAMPLES
-        + "\n"
-        + TEMPLATE_USE_INSTRUCTIONS;
+    public static final String DEFAULT_QUERY_PLANNING_SYSTEM_PROMPT = PROMPT_PREFIX + "\n\n" + OUTPUT_FORMAT_INSTRUCTIONS + "\n" + EXAMPLES;
 
     public static final String DEFAULT_QUERY_PLANNING_USER_PROMPT = "Question: ${parameters.question}\n"
         + "Mapping: ${parameters.index_mapping:-}\n"
